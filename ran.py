@@ -5,22 +5,13 @@ from numpy import linalg as LA
 import matplotlib.pyplot as plt
 import pylab
 from mpl_toolkits.mplot3d import Axes3D
-import numpy
-import pylab
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.colors import LinearSegmentedColormap
-from matplotlib import cm
-
-import pylab
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib.colors import LinearSegmentedColormap
 from matplotlib import cm
 import numpy
 
 
 x1, x2, lamb = symbols('x1 x2 lamb')
 
-# r = 0.2
+
 X0 = [-1.2, 0]
 f = 100*((x1*x1-x2)**2)+(x1-1)**2
 
