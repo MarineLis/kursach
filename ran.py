@@ -176,8 +176,6 @@ def makeData ():
     x = numpy.arange (-10, 10, 0.1)
     y = numpy.arange (-10, 10, 0.1)
     xgrid, ygrid = numpy.meshgrid(x, y)
-
-    # numpy.sin (xgrid) * numpy.sin (ygrid) / (xgrid * ygrid)
     zgrid = (100*(xgrid*xgrid-ygrid)**2 + (xgrid-1)**2)
     return xgrid, ygrid, zgrid
 
@@ -201,11 +199,12 @@ def makeData ():
 x, y, z = makeData()
 
 fig = pylab.figure()
+
 axes = Axes3D(fig)
 
 axes.plot_surface(x, y, z, rstride=5, cstride=5, cmap = cm.jet)
 axes.scatter(1, 1, 0, color='red')
-
+plt.tight_layout(False)
 pylab.show()
 
 
